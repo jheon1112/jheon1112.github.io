@@ -1,49 +1,80 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dummy Page</title>
+  <meta charset="UTF-8">
+  <title>Coming Soon</title>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-      background-color: #f9f9f9;
-    }
-    header, footer {
-      background-color: #333;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #6dd5ed8a, #20b3d8);
       color: #fff;
-      padding: 1rem;
+    }
+    header {
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
       text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
     }
     main {
-      background-color: #fff;
-      padding: 2rem;
-      margin: 1rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
     }
-    h1 {
-      margin-top: 0;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      width: 100%;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 50px 40px;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      background: #2193b0;
+      color: #fff;
+    }
+    footer {
+      background: rgba(0,0,0,0.3);
+      padding: 15px;
+      text-align: center;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>더미 페이지 헤더</h1>
+    프로젝트 이름 (Header)
   </header>
+
   <main>
-    <h2>본문 영역</h2>
-    <p>여기에 더미 텍스트를 넣어보세요. 예: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <ul>
-      <li>첫 번째 항목</li>
-      <li>두 번째 항목</li>
-      <li>세 번째 항목</li>
-    </ul>
-    <button onclick="alert('더미 버튼 클릭!')">더미 버튼</button>
+    <div class="grid">
+      <div class="card">🚀 Coming Soon</div>
+      <div class="card">현재는 더미 페이지</div>
+      <div class="card">✨ 새로운 페이지 준비중</div>
+      <div class="card">곧 만나보실 수 있어요</div>
+      <div class="card">아직 개발중</div>
+      <div class="card">🔧 Coming Soon</div>
+    </div>
   </main>
+
   <footer>
-    <p>© 2025</p>
+    © 2025 All Rights Reserved.
   </footer>
 </body>
 </html>
